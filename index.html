@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midpoint cordinates</title>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Հատվածի միջնակետի կորդինատները</h2>
+
+<div style="display: flex;">
+    <h1 id="hhtag">A</h1>
+    <h4>(X<sub>1</sub>,Y<sub>1</sub>)</h4>
+    <h1 id="hhtag1">B</h1>
+    <h4>(X<sub>0</sub>,Y<sub>0</sub>)</h4>
+    <h1 id="hhtag2">C</h1>
+    <h4>(X<sub>2</sub>,Y<sub>2</sub>)</h4>
+</div>
+
+    <img src="fon.png" alt="" style="size: 10px;">
+
+<div style="display: flex;">
+    <h2 id="htag"></h2>
+    <h2>= (</h2>
+    <input type="text" name="" id="inp" class="inp"> 
+    <h2 style=" margin-left: 5px;">;</h2>
+    <input type="text" name="" id="inp1" class="inp"> 
+    <h2 style=" margin-left: 5px;">)</h2>
+</div>
+
+
+<div style="display: flex;">
+    <h2 id="htag2" id="h1"></h2>
+    <h2>= (</h2>
+    <input type="text" name="" id="inp2" class="inp"> 
+    <h2 style=" margin-left: 5px;">;</h2>
+    <input type="text" name="" id="inp3" class="inp"> 
+    <h2 style=" margin-left: 5px;">)</h2>
+   
+</div>
+
+<div style="display: flex;">
+    <h2 id="htag3" id="h1"></h2>
+    <h2>= (</h2>
+    <input type="text" name="" id="inp4" class="inp"> 
+    <h2 style=" margin-left: 5px;">;</h2>
+    <input type="text" name="" id="inp5" class="inp"> 
+    <h2 style=" margin-left: 5px;">)</h2>
+    <h2 style=" margin-left: 5px;">(միջնակետ)</h2>
+</div>
+
+
+<hr size="7px" color="skyblue" width="100%">
+<div style="display: flex;">
+<button id="but">Լուծել</button>
+<button id="but1" style="display: none; margin-left: 10px;">Ջնջել
+</button>
+</div>
+
+<div id="hdiv">
+
+
+<div style="display: flex; display: none;" id="divide">
+    <h2 id="htag4"></h2>
+    <h4>(X<sub>1</sub>,Y<sub>1</sub>)</h4>
+    <h2>= (</h2>
+    <h2 id="dlin1"></h2>
+    <h2 style=" margin-left: 5px;">;</h2>
+    <h2 id="dlin4"></h2>
+    <h2 style=" margin-left: 5px;">)</h2>
+</div>
+
+
+<div style="display: flex; display: none;" id="divide1">
+    <h2 id="htag5" ></h2>
+    <h4>(X<sub>2</sub>,Y<sub>2</sub>)</h4>
+    <h2>= (</h2>
+    <h2 id="dlin2"></h2>
+    <h2 style=" margin-left: 5px;">;</h2>
+    <h2 id="dlin5"></h2> 
+    <h2 style=" margin-left: 5px;">)</h2>
+   
+</div>
+
+<div style="display: flex; display: none;" id="divide2">
+    <h2 id="htag6" ></h2>
+    <h4>(X<sub>0</sub>,Y<sub>0</sub>)</h4>
+    <h2>= (</h2>
+    <h2 id="dlin3"></h2>
+    <h2 style=" margin-left: 5px;">;</h2>
+    <h2 id="dlin6"></h2>
+    <h2 style=" margin-left: 5px;">)</h2>
+</div>
+
+</div>
+
+<style>
+
+body {
+   background-image: url(https://avatanplus.com/files/resources/original/589df861a261f15a29123d81.jpg);
+}
+
+
+.inp {
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 35px;
+    height: 25px;
+    float: left;
+}
+
+
+
+#but {
+    width: 70px;
+    height: 45px;
+    background-color: aquamarine;
+}
+
+#but1 {
+    width: 70px;
+    height: 45px;
+    background-color: crimson;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+#hhtag1 {
+    margin-left: 155px;
+}
+
+#hhtag2 {
+    margin-left: 160px;
+}
+
+
+
+</style>
+
+
+    <script>
+
+          var prom = prompt("Հատվածի կորդինատային տառ")
+          var prom2 = prompt("Հատվածի կորդինատային տառ")
+           var prom3 = prompt("Հատվածի միջնակետի կորդինատ")
+          var htag = document.getElementById("htag")
+          var hhtag = document.getElementById("hhtag")
+          var hhtag1 = document.getElementById("hhtag1")
+          var hhtag2 = document.getElementById("hhtag2")
+          var htag2 = document.getElementById("htag2")
+          var htag3 = document.getElementById("htag3")
+          var htag4 = document.getElementById("htag4")
+          var htag5 = document.getElementById("htag5")
+          var htag6 = document.getElementById("htag6")
+          htag.innerHTML = prom
+          htag2.innerHTML = prom2
+          htag3.innerHTML = prom3
+          htag4.innerHTML = htag.innerHTML
+          htag5.innerHTML = htag2.innerHTML
+          htag6.innerHTML = htag3.innerHTML
+          hhtag.innerHTML = htag.innerHTML
+          hhtag1.innerHTML = htag3.innerHTML
+          hhtag2.innerHTML = htag2.innerHTML
+       
+
+        var but = document.getElementById("but")
+        var but1 = document.getElementById("but1")
+        var divide = document.getElementById("divide")
+        var divide1 = document.getElementById("divide1")
+        var divide2 = document.getElementById("divide2")
+        var dlin1 = document.getElementById("dlin1")
+        var dlin2 = document.getElementById("dlin2")
+        var dlin3 = document.getElementById("dlin3")
+        var dlin4 =  document.getElementById("dlin4")
+        var dlin5 =  document.getElementById("dlin5")
+        var dlin6 =  document.getElementById("dlin6")
+        var inp = document.getElementById("inp")
+        var inp1 = document.getElementById("inp1")
+        var inp2 = document.getElementById("inp2")
+        var inp3 = document.getElementById("inp3")
+        var inp4 = document.getElementById("inp4")
+        var inp5 = document.getElementById("inp5")
+        var hdiv = document.getElementById('hdiv')
+
+       
+       but.onclick = function () {
+            divide.style.display = "block"
+            divide.style.display = "flex"
+
+            divide1.style.display = "block"
+            divide1.style.display = "flex"
+
+            divide2.style.display = "block"
+            divide2.style.display = "flex"
+
+            but1.style.display = "block"
+            hdiv.style.display = "block"
+        
+
+        dlin1.innerHTML = inp4.value*2 - inp2.value
+        dlin2.innerHTML = inp4.value*2 - inp.value
+        dlin3.innerHTML = inp.value/2 + inp2.value/2
+        dlin4.innerHTML = inp5.value*2 - inp3.value
+        dlin5.innerHTML = inp5.value*2 - inp1.value
+        dlin6.innerHTML = inp1.value/2 + inp3.value/2
+
+
+
+
+      
+            
+        if(inp2.value == ''){
+            divide.style.display = "none"
+            divide2.style.display = "none"
+        } else if (inp.value == '') {
+            divide1.style.display = "none"
+            divide2.style.display = "none"
+        } else if (inp4.value == '') {
+            divide.style.display = "none"
+            divide1.style.display = "none"
+        } 
+
+
+
+        
+
+        } 
+
+        
+
+        but1.onclick = function() {
+            hdiv.style.display = "none"
+        }
+
+       
+            
+
+        
+        
+    </script>
+</body>
+</html>
